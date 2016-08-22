@@ -14,7 +14,7 @@ function checkTopLevelNpmDependencies(filename, verbose) {
   var deps = utils.getAllDependencies(pkg);
 
   if (verbose) {
-    console.log(pkg.name + ' declares:\n' +
+    console.log((pkg.name || 'Your package') + ' declares:\n' +
       JSON.stringify(deps, null, 2));
   }
 

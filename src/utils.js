@@ -14,11 +14,7 @@ function getPackage(packageFilename) {
     return;
   }
 
-  var pkg = require(packageFilename);
-  if (!_.isString(pkg.name)) {
-    throw new Error('missing package name inside ' + packageFilename);
-  }
-  return pkg;
+  return require(packageFilename);
 }
 
 function getAllDependencies(pkg) {
